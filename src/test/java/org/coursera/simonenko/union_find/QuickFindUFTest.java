@@ -17,7 +17,8 @@ public class QuickFindUFTest {
 
     @Parameterized.Parameters
     public static Collection<Class<? extends UF>> data() {
-        return Arrays.asList(QuickFindUF.class, QuickUnionUF.class, QuickUnionWeightedUF.class);
+        return Arrays.asList(QuickFindUF.class, QuickUnionUF.class, QuickUnionWeightedUF.class,
+                QuickUnionWeightedWithPathCompressionUF.class);
     }
 
     private Class<? extends UF> ufClass;

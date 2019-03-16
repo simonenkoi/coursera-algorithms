@@ -2,7 +2,7 @@ package org.coursera.simonenko.union_find;
 
 public class QuickUnionUF implements UF {
 
-    private final int[] ids;
+    protected final int[] ids;
 
     public QuickUnionUF(int size) {
         ids = new int[size];
@@ -23,14 +23,14 @@ public class QuickUnionUF implements UF {
         ids[rootOfP] = rootOfQ;
     }
 
-    private int getRootOfNode(int node) {
+    protected int getRootOfNode(int node) {
         while (node != ids[node]) {
             node = ids[node];
         }
         return node;
     }
 
-    private void assertThatParametersAreCorrect(int p, int q) {
+    protected void assertThatParametersAreCorrect(int p, int q) {
         if (p >= ids.length || q >= ids.length) {
             throw new IllegalArgumentException();
         }
