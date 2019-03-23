@@ -1,4 +1,4 @@
-package org.coursera.simonenko.stack_and_queue;
+package org.coursera.simonenko.stack;
 
 public class ResizingStack<E> implements Stack<E> {
 
@@ -21,7 +21,17 @@ public class ResizingStack<E> implements Stack<E> {
         size++;
     }
 
+    public E peek() {
+        if (size == 0) {
+            return null;
+        }
+        return elements[size - 1];
+    }
+
     public E pop() {
+        if (isEmpty()) {
+            return null;
+        }
         --size;
         E item = elements[size];
         elements[size] = null;

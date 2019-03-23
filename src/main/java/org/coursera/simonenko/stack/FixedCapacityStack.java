@@ -1,4 +1,4 @@
-package org.coursera.simonenko.stack_and_queue;
+package org.coursera.simonenko.stack;
 
 public class FixedCapacityStack<E> implements Stack<E> {
     private E[] elements;
@@ -17,7 +17,17 @@ public class FixedCapacityStack<E> implements Stack<E> {
         size++;
     }
 
+    public E peek() {
+        if (isEmpty()) {
+            return null;
+        }
+        return elements[size - 1];
+    }
+
     public E pop() {
+        if (isEmpty()) {
+            return null;
+        }
         --size;
         E item = elements[size];
         elements[size] = null;

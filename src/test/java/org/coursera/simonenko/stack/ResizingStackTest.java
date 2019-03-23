@@ -1,4 +1,4 @@
-package org.coursera.simonenko.stack_and_queue;
+package org.coursera.simonenko.stack;
 
 public class ResizingStackTest extends StackTest<ResizingStack<String>> {
 

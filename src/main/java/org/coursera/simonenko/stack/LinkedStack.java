@@ -1,25 +1,30 @@
-package org.coursera.simonenko.stack_and_queue;
+package org.coursera.simonenko.stack;
 
 public class LinkedStack<E> implements Stack<E> {
-    private Node first;
-
-    private class Node {
-        E item;
-        Node next;
-    }
+    private Node<E> first;
 
     public boolean isEmpty() {
         return first == null;
     }
 
     public void push(E item) {
-        Node oldFirst = first;
-        first = new Node();
+        Node<E> oldFirst = first;
+        first = new Node<>();
         first.item = item;
         first.next = oldFirst;
     }
 
+    public E peek() {
+        if (isEmpty()) {
+            return null;
+        }
+        return first.item;
+    }
+
     public E pop() {
+        if (isEmpty()) {
+            return null;
+        }
         E item = first.item;
         first = first.next;
         return item;

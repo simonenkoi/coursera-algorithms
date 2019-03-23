@@ -1,18 +1,16 @@
-package org.coursera.simonenko.stack_and_queue;
+package org.coursera.simonenko.stack;
 
 import org.junit.Before;
 import org.junit.Test;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
 public abstract class StackTest<T extends Stack<String>> {
 
-    private static final String TEST_STRING_1 = "TEST_STRING_1";
-    private static final String TEST_STRING_2 = "TEST_STRING_2";
+    protected static final String TEST_STRING_1 = "TEST_STRING_1";
+    protected static final String TEST_STRING_2 = "TEST_STRING_2";
 
-    private T stack;
+    protected T stack;
 
     protected abstract T createStack();
 
@@ -35,6 +33,29 @@ public abstract class StackTest<T extends Stack<String>> {
         String actual = stack.pop();
 
         assertEquals(TEST_STRING_1, actual);
+    }
+
+    @Test
+    public void elementPeekedFromEmptyStackShouldBeNull() {
+        String actual = stack.peek();
+
+        assertNull(actual);
+    }
+
+    @Test
+    public void elementPoppedFromEmptyStackShouldBeNull() {
+        String actual = stack.pop();
+
+        assertNull(actual);
+    }
+
+    @Test
+    public void stackShouldNotBeEmptyAfterPushAndPeek() {
+        stack.push(TEST_STRING_1);
+        stack.peek();
+        boolean empty = stack.isEmpty();
+
+        assertFalse(empty);
     }
 
     @Test

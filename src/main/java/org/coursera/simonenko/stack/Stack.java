@@ -1,10 +1,12 @@
-package org.coursera.simonenko.stack_and_queue;
+package org.coursera.simonenko.stack;
 
 public interface Stack<E> {
 
     boolean isEmpty();
 
     void push(E item);
+
+    E peek();
 
     E pop();
 }

@@ -1,4 +1,4 @@
-package org.coursera.simonenko.stack_and_queue;
+package org.coursera.simonenko.stack;
 
 public class FixedCapacityStackTest extends StackTest<FixedCapacityStack<String>> {
 
