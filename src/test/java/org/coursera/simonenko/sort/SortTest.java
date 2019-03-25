@@ -53,5 +53,11 @@ public abstract class SortTest<T extends Sort<Double>> {
     }
 
     protected void assertArraySorted(Double[] array) {
+        for (int i = 1; i < array.length; ++i) {
+            if (array[i - 1] > array[i]) {
+                throw new AssertionError();
+            }
+        }
+
     }
 }
