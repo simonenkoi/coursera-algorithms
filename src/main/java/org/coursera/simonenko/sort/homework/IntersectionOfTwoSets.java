@@ -1,4 +1,4 @@
-package org.coursera.simonenko.sort;
+package org.coursera.simonenko.sort.homework;
 
 import java.util.Arrays;
 

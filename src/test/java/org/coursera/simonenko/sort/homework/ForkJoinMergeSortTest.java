@@ -1,4 +1,7 @@
-package org.coursera.simonenko.sort;
+package org.coursera.simonenko.sort.homework;
+
+import org.coursera.simonenko.sort.SortTest;
+import org.coursera.simonenko.sort.homework.ForkJoinMergeSort;
 
 public class ForkJoinMergeSortTest extends SortTest<ForkJoinMergeSort<Double>> {
 

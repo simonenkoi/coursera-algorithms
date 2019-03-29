@@ -1,4 +1,6 @@
-package org.coursera.simonenko.sort;
+package org.coursera.simonenko.sort.homework;
+
+import org.coursera.simonenko.sort.Sort;
 
 import java.util.Arrays;
 import java.util.concurrent.ForkJoinPool;
